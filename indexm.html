@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         
-       if( navigator.userAgent.match(/Android/i)   
+    var data = {value:[{thumbnailUrl:"video/marcador.3gp"}, {thumbnailUrl:"video/marcador.webm"}]}
+        if( navigator.userAgent.match(/Android/i)   
  || navigator.userAgent.match(/webOS/i)
  || navigator.userAgent.match(/iPhone/i)
  || navigator.userAgent.match(/iPad/i)
@@ -19,17 +20,11 @@
  || navigator.userAgent.match(/BlackBerry/i)
  || navigator.userAgent.match(/Windows Phone/i)
     {
-       function changeSource(url) {
-   var video = document.getElementById('video/marcador.3gp');
-   video.src = url;
-   video.play();
+       document.getElementById('marcadorWin').setAttribute ("src", data.valyue[0].thumbnailUrl);
 }
        }
        else
-        function changeSource(url) {
-   var video = document.getElementById('video/marcador.webm');
-   video.src = url;
-   video.play();
+       document.getElementById('marcadorWin').setAttribute ("src", data.valyue[1].thumbnailUrl);
 }
         }
         
