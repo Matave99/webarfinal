@@ -45,13 +45,13 @@
     <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
         <a-assets>
             <video preload="auto" id="vid" poster="THUMBNAIL" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
-                <source  src="marcador.webm">
+                <source  src="marcador.3gp">
                 <!--<img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button.-->
             </video>
         </a-assets> 
         
         <a-marker preset="hiro">
- <a-video src="video/marcador.webm" width="3" height="3" position="0 0 0" rotation="90 180 0"></a-video>
+ <a-video src="video/marcador.3gp" width="3" height="3" position="0 0 0" rotation="90 180 0"></a-video>
           <a-plane position='0 -1 0' rotation="90 0 0" material='transparent:true;src:#vid' controls></a-plane>
         </a-marker>
         <a-entity camera></a-entity>
