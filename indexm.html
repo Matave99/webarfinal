@@ -10,7 +10,21 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-     console.log("hola1");
+        
+       if( navigator.userAgent.match(/Android/i)   
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+    {
+       document.getElementById('marcadorWin').src='video/marcador.3gp';
+       }
+        else{
+         document.getElementById('marcadorWin').src='video/marcador.webm';
+        }
+        
         AFRAME.registerComponent('vidhandler', {
             init: function() {
                 this.toggle = false;
@@ -35,11 +49,14 @@
         function playvid() {
             vid.play();
         }
+        
+        
+    
+        
     </script>
     <!-- IF YOU WANT TO PLAY ALPHA VIDEO THEN IT SHOULD BE IN WEBM FORMAT ........ 
     FOR NORMAL VIDEO - or OGG -->
 </head>
-
 <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
         <a-assets>
@@ -55,8 +72,10 @@
         <a-entity camera></a-entity>-->
         
         
-         <a-marker preset="hiro">
-  <a-video src="video/marcador.3gp" width="3" height="3" position="0 0 0" rotation="90 180 0"></a-video>
+        
+        
+        <a-marker preset="hiro">
+  <a-video id="marcadorWin" src="" width="3" height="3" position="0 0 0" rotation="90 180 0"></a-video>
           <a-plane position='0 -1 0' rotation="90 0 0" material='transparent:true;src:#vid' controls></a-plane>
         </a-marker>
         <a-entity camera></a-entity>
@@ -79,5 +98,4 @@
     </div>
 -->
 </body>
-
 </html>
