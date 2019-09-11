@@ -37,21 +37,7 @@
             vid.play();
         }
         
-         var data = {value:[{thumbnailUrl:"video/marcador.3gp"}, {thumbnailUrl:"video/marcador.webm"}]}
-        if( navigator.userAgent.match(/Android/i)   
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
-    {
-       document.getElementById('marcadorWin').setAttribute('src',data.value[0].thumbnailUrl);
-        }else{
-       document.getElementById('marcadorWin').setAttribute('src',data.value[1].thumbnailUrl);
-        }
-    
-        
+     
     </script>
     <!-- IF YOU WANT TO PLAY ALPHA VIDEO THEN IT SHOULD BE IN WEBM FORMAT ........ 
     FOR NORMAL VIDEO - or OGG -->
@@ -60,7 +46,7 @@
     <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
         <a-assets>
             <video preload="auto" id="vid" poster="THUMBNAIL" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
-                <source  src="marcador.3gp">
+              
                <!-- <img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button.-->
             </video>
             
